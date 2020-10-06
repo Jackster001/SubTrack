@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navBar{
+  width: 100%;
+  height: 100px;
+  flex-direction: row;
+  display: flex;
+}
+.navUL{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navUL2{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navUL2>li{
+  margin: 5px;
+  text-decoration: none;
+  float: right;
+}
+.navUL>li{
+  margin: 5px;
+  text-decoration: none;
+}
+.navLogoContainer{
+  width:32.33%;
+  margin-top: 15px;
+}
+.navLogoContainer>h1{
+  font-weight: 500;
+  margin-left: 10px;
+}
+.navULContainer{
+  width:66.33%;
+  float: left;
+  margin-top: 30px;
+}
+.signUpContainer{
+  width: 400px;
+  max-height: 700px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #dbdbdb;
+  padding: 15px 0px;
+}
+.signInContainer{
+  width: 400px;
+  max-height: 700px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #dbdbdb;
+  padding: 15px 0px;
+}
+.signInForm{
+  width: 80%;
+  margin: 0 auto;
+}
+.signInForm>form>input{
+  width: 100%;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.signupForm{
+  width: 80%;
+  margin: 0 auto;
+}
+.signupForm>form>input{
+  width: 100%;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.submitButton{
+  width: 100%;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin-top: 10px;
+  background-color: #e6c875;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 1px;
+}
+.submitButton:hover{
+  background-color: #f0c859;
+  cursor: pointer;
+}
+.ProfileContainer{
+  background-color: rgba(238, 238, 238, 0.5);
+  width: 500px;
+  max-height: 500px;
+  padding:20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px #888888;
+  margin-top: 15px;
+}
+.accountCircle{
+  margin-top: 20px; 
+}
+.accountCircleContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
