@@ -57,7 +57,7 @@ export const removeSubscription = (id , i) => async (dispatch)=> {
 }
 
 // update a specific subscription for a user
-export const updateJob = (id, jobData, i) => async (dispatch)=> {
+export const updateSubscriPTION = (id, jobData, i) => async (dispatch)=> {
     try{
         const profile= await axios.post(`${dev}/users/update-subscription/`, {id, jobData, i});
         await dispatch({
