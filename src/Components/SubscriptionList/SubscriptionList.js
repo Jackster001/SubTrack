@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { getAllSubscriptions } from "../../Action/profileAction";
 import { disableUserProfileLoading } from "../../Action/authAction";
 import { connect } from "react-redux";
 import SubscriptionListItem from "./SubscriptionListItem";
@@ -14,28 +13,22 @@ class SubscriptionList extends Component {
 
   //include AddSubButton and RemoveSubButton
   displaySubs = (subs) => {
-    console.log(subs);
     if (!subs) return [];
-    return (subs.map((sub, index) => {
-      console.log("in one sub");
-      return (
-          <SubscriptionListItem sub={sub} index={index} />
-      );
-    }))
+    return subs.map((sub, index) => {
+      return <SubscriptionListItem sub={sub} index={index} key={sub.title}/>;
+    });
   };
-
-  componentDidMount() {
-    this.props.getAllSubscriptions(this.props.profile.id);
-  }
 
   componentDidUpdate() {
     if (this.props.loadingProfile) {
       this.props.disableUserProfileLoading();
     }
   }
-
+  //this.props.profile.subscriptions
   render() {
-    return <div className="listHold">{this.displaySubs(this.state.exSubs)}</div>;
+    return (
+      <div className="listHold">{this.displaySubs(this.state.exSubs)}</div>
+    );
   }
 }
 
@@ -45,6 +38,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  getAllSubscriptions,
   disableUserProfileLoading,
 })(SubscriptionList);

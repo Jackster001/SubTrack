@@ -135,13 +135,15 @@ code {
   align-items: center;
   justify-content: flex-end;
 }
-
 .listContain{
-  width:100vh;
-  height:30vh;
+  display: flex;
+  flex-direction: row;
+}
+.subList{
+  width:80vh;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888888;
-  padding:5vh;
+  padding:3vh;
   margin-top: 15px;
   margin-left:auto;
   margin-right:auto;
@@ -150,23 +152,38 @@ code {
 .listThumb{
   height:20vh;
   width:20vh;
+  float:left;
+  margin-top:3vh;
 }
 
 .subListHeader{
   font-weight:600;
-  font-size:2.5rem;
-  margin:5vh;
+  font-size:3rem;
+  margin-left:23vh;
 }
 
 .subListPrice{
-  font-weight:400;
-  font-size:2rem;
-  margin:5vh;
+  font-weight:300;
+  font-size:2.5rem;
+  margin:2vh;
+  margin-left:22vh;
+  margin-top:-3vh;
 }
 
 .subListDate{
   float:right;
   font-weight:300;
   font-size:2rem;
-  margin:5vh;
+  margin-top:-25vh;
+}
+
+.removeButton{
+  height:5vh;
+  width:5vh;
+  border-radius: 15px;
+  border:0;
+  background-color:white;
+  text-align:center;
+  box-shadow: 5px 5px 10px #888888;
+  padding:3vh;
 }
