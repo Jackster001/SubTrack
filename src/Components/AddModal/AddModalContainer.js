@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import AddSubModal from "./AddSubModal";
 import AddSubButton from "./AddSubButton";
+//import { CSSTransition } from "react-transition-group";
 
 class AddModalContainer extends Component {
   constructor(props) {
@@ -16,7 +17,9 @@ class AddModalContainer extends Component {
     return (
       <Fragment>
         <AddSubButton toggleModal={this.toggleModal} />
-        {this.state.addOpen && <AddSubModal toggleModal={this.toggleModal} />}
+        {this.state.addOpen && (
+            <AddSubModal toggleModal={this.toggleModal} />
+        )}
       </Fragment>
     );
   }
