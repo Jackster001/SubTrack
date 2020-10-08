@@ -3,9 +3,7 @@ import {connect} from 'react-redux';
 import { logoutUser } from '../Action/authAction';
 class Account extends Component {
 
-    componentDidMount(){
-        console.log(this.props.profile)
-    }
+
     render() {
         return (
         <div>
