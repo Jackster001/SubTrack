@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'; 
 import {disableUserProfileLoading} from '../Action/authAction'
+import SubscriptionList from '../Components/SubscriptionList/SubscriptionList';
 
 class Home extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class Home extends Component {
     return (
       <div>
         <h1>You are logged in!</h1>
+        <SubscriptionList/>
       </div>
     );
   }
