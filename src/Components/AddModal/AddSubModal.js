@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { addSubscription } from "../../Action/profileAction";
+import { disableUserProfileLoading } from "../../Action/profileAction";
 import { connect } from "react-redux";
 
 //Will return to the date later, maybe implement calendar library?
@@ -108,4 +109,7 @@ const mapStateToProps = (state) => ({
   profile: state.userState.profile,
 });
 
-export default connect(mapStateToProps, { addSubscription })(AddSubModal);
+export default connect(mapStateToProps, {
+  addSubscription,
+  disableUserProfileLoading,
+})(AddSubModal);
