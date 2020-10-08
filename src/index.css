@@ -112,6 +112,19 @@ code {
   color: white;
   font-size: 16px;
 }
+.submitModalButton {
+  width: 25vh;
+  height: 6.7vh;
+  border-radius: 15px;
+  padding: 15px 10px;
+  font-weight: 400;
+  margin-top: 1.3vh;
+  background-color: #ef4836;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 9vh;
+}
 .submitButton:hover {
   background-color: #ef4836;
   cursor: pointer;
@@ -155,7 +168,7 @@ input {
   border: 0;
   box-shadow: 2px 2px 5px #888888;
   text-align: center;
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 .quitButton {
@@ -164,19 +177,19 @@ input {
   height: 5vh;
   box-shadow: 2px 2px 5px #888888;
   border-radius: 10px;
-  margin-left:6vh;
+  margin-left: 6vh;
   background-color: white;
-  font-size:1rem;
+  font-size: 1rem;
 }
 
-.addToggleButton{
-  height:8vh;
-  width:12vh;
-  border-radius:10px;
-  border:0;
+.addToggleButton {
+  height: 8vh;
+  width: 12vh;
+  border-radius: 10px;
+  border: 0;
   box-shadow: 3px 3px 5px #888888;
   background-color: white;
-  font-size:3rem;
-  text-align:center;
-  font-weight:200;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 200;
 }

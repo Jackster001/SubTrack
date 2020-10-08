@@ -94,7 +94,7 @@ class AddSubModal extends Component {
             value={this.state.date}
             required
           />
-          <button type="submit" className="submitButton">
+          <button type="submit" className="submitModalButton">
             Submit
           </button>
         </form>
