@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import CompareChart from "./CompareChart";
+import Fade from 'react-reveal';
 
 class GlanceHeader extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class GlanceHeader extends Component {
   render() {
     if (this.state.isOpen)
       return (
-          <>
+          <Fade top>
           {this.props.subs[0] ?
         <div className="glanceContain">
           <div className="sideText">
@@ -60,7 +61,7 @@ class GlanceHeader extends Component {
           </button>
        </div>
           }
-          </>
+          </Fade>
       )
       return [];
   }
