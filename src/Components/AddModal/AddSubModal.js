@@ -35,6 +35,7 @@ class AddSubModal extends Component {
       price: "",
       date: "",
     });
+    this.props.toggleModal()
   }
 
   componentDidMount() {
