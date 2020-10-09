@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import RemoveSubButton from "./RemoveSubButton";
-
+import EditModalContainer from '../EditModal/EditModalContainer';
 //this component will also have the addSubscription and editSubscription buttons
 class SubscriptionList extends Component {
   render() {
@@ -18,6 +18,7 @@ class SubscriptionList extends Component {
             <h4 className="subListDate">{this.props.sub.date}</h4>
           </div>
           <RemoveSubButton index={this.props.index} />
+          <EditModalContainer index={this.props.index}/>
         </div>
       );
     }

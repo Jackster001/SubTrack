@@ -64,11 +64,11 @@ export const removeSubscription = (id, i) => async (dispatch) => {
 };
 
 // update a specific subscription for a user
-export const updateSubscription = (id, jobData, i) => async (dispatch) => {
+export const updateSubscription = (id, subData, i) => async (dispatch) => {
   try {
     const profile = await axios.post(`${dev}/users/update-subscription/`, {
       id,
-      jobData,
+      subData,
       i,
     });
     await dispatch({
@@ -83,14 +83,9 @@ export const updateSubscription = (id, jobData, i) => async (dispatch) => {
 // get all subscriptions
 export const getAllSubscriptions = (id) => async (dispatch) => {
   try {
-    const profile = await axios.get(`${dev}/users/subscriptions/${id}`,{
-        headers: { Authorization: localStorage.jwtToken },
-    })
-    console.log("request " + profile.data);
-    await dispatch({
-        type: "UPDATE_SUBSCRIPTION",
-        payload: profile.data,
-    })
+    const profile = await axios.post(`${dev}/users/add-subscription/${id}`, {
+      headers: { Authorization: localStorage.jwtToken },
+    });
   } catch (err) {
     throw err;
   }

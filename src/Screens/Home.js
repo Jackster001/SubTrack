@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { disableUserProfileLoading } from "../Action/authAction";
 import AddModalContainer from "../Components/AddModal/AddModalContainer";
 import SubscriptionList from '../Components/SubscriptionList/SubscriptionList';
-
 class Home extends Component {
   constructor(props) {
     super(props);
