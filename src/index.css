@@ -211,3 +211,69 @@ input {
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
+
+.listContain{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-content:center;
+  align-items:baseline;
+  
+}
+.subList{
+  width:50vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  padding:3vh;
+  margin-top: 15px;
+  margin-left:auto;
+  margin-right:auto;
+  flex-grow: 1;
+  margin:5vh;
+  margin-left:20vh;
+  margin-right:20vh;
+}
+
+.listThumb{
+  height:15vh;
+  width:15vh;
+  float:left;
+  margin-top:1.5vh;
+}
+
+.subListHeader{
+  font-weight:600;
+  font-size:2rem;
+  margin-left:23vh;
+}
+
+.subListPrice{
+  font-weight:300;
+  font-size:1.5rem;
+  margin:2vh;
+  margin-left:22vh;
+  margin-top:-3vh;
+}
+
+.subListDate{
+  float:right;
+  font-weight:300;
+  font-size:2rem;
+  margin-top:-10vh;
+}
+
+.removeButton{
+  align-self:baseline;
+  height:10vh;
+  width:10vh;
+  border-radius: 15px;
+  border:0;
+  background-color:white;
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  box-shadow: 5px 5px 10px #888888;
+  padding:3vh;
+  margin:5vh;
+  margin-right:20vh;
+}
