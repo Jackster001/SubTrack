@@ -62,7 +62,7 @@ class GlanceHeader extends Component {
           }
           </>
       )
-
+      return [];
   }
 }
 const mapStateToProps = (state) => ({
