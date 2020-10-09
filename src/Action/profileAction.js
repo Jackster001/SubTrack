@@ -5,6 +5,7 @@ const dev = "http://localhost:5000";
 // get current user's profile
 export const getProfile = (id) => async (dispatch) => {
   try {
+    console.log("id sent in " + id);
     const profile = await axios.get(`${dev}/users/${id}`, {
       headers: { Authorization: localStorage.jwtToken },
     });
@@ -64,11 +65,11 @@ export const removeSubscription = (id, i) => async (dispatch) => {
 };
 
 // update a specific subscription for a user
-export const updateSubscription = (id, jobData, i) => async (dispatch) => {
+export const updateSubscription = (id, subData, i) => async (dispatch) => {
   try {
     const profile = await axios.post(`${dev}/users/update-subscription/`, {
       id,
-      jobData,
+      subData,
       i,
     });
     await dispatch({
