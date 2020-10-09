@@ -155,9 +155,9 @@ code {
   box-shadow: 5px 5px 10px #888888;
   background:white;
   align-content: center;
-  top: 50%;
+  top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
@@ -190,7 +190,7 @@ input {
   height: 8vh;
   width: 12vh;
   border-radius: 10px;
-  margin:auto;
+  margin-left:auto;
   border: 0;
   box-shadow: 3px 3px 5px #888888;
   background-color: white;
@@ -308,11 +308,11 @@ input {
   box-shadow: 5px 5px 10px #888888;
   padding:3vh;
   margin:5vh;
-  margin-top:-1vh;
-  margin-left:-3vh;
 }
 
 .addHold{
   display:flex;
   margin:auto;
+  justify-content:center;
+  margin:3vh;
 }
