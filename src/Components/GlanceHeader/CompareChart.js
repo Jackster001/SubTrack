@@ -14,7 +14,6 @@ class CompareChart extends Component {
           value: parseFloat(sub.price),
         });
     });
-    console.log("Data " + data[0].id);
     return data;
   };
 
@@ -26,7 +25,7 @@ class CompareChart extends Component {
         padAngle={0.7}
         cornerRadius={3}
         margin={{
-            bottom: 5
+            bottom: 20
           }}
         colors={{ scheme: "reds" }}
         borderWidth={1}

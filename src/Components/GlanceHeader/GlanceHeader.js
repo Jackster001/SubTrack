@@ -18,7 +18,6 @@ class GlanceHeader extends Component {
     for (var i = subs.length; i--; ) {
       if (subs[i]) sum += Math.ceil(parseFloat(subs[i].price));
     }
-    console.log("sum " + sum);
     return sum;
   };
   handleClose = () => {
@@ -27,6 +26,8 @@ class GlanceHeader extends Component {
   render() {
     if (this.state.isOpen)
       return (
+          <>
+          {this.props.subs[0] ?
         <div className="glanceContain">
           <div className="sideText">
             <h1>At a Glance</h1>
@@ -44,8 +45,24 @@ class GlanceHeader extends Component {
             X
           </button>
         </div>
-      );
-    return [];
+        : 
+        <div className="glanceContain" style={{height:`10vh`,}}>
+       <h1 style={{flexGrow:`1`}}>
+           You have no subscriptions yet. Let's get started.
+       </h1>
+       <button
+            type="button"
+            className="removeChartButton"
+            style={{marginTop:`auto`,}}
+            onClick={this.handleClose}
+          >
+            X
+          </button>
+       </div>
+          }
+          </>
+      )
+
   }
 }
 const mapStateToProps = (state) => ({
