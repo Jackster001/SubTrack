@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { disableUserProfileLoading } from "../../Action/authAction";
+import {getProfile} from '../../Action/profileAction';
 import { connect } from "react-redux";
 import SubscriptionListItem from "./SubscriptionListItem";
 
@@ -12,7 +13,7 @@ class SubscriptionList extends Component {
   displaySubs = (subs) => {
     if (!subs) return [];
     return subs.map((sub, index) => {
-      return <SubscriptionListItem sub={sub} index={index} key={sub.title}/>;
+      return <SubscriptionListItem sub={sub} index={index} key={index}/>;
     });
   };
 
@@ -21,16 +22,16 @@ class SubscriptionList extends Component {
       this.props.disableUserProfileLoading();
     }
   }
-  //
+  
   render() {
     return (
-      <div className="listHold">{this.displaySubs(this.props.profile.subscriptions)}</div>
+      <div className="listHold">{this.displaySubs(this.props.subs)}</div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  profile: state.userState.profile,
+  subs: state.userState.profile.subscriptions,
   loadingProfile: state.userState.loadingProfile,
 });
 
