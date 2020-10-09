@@ -1,12 +1,12 @@
-
-:wq
 import axios from "axios";
+
 const server = "";
 const dev = "http://localhost:5000";
 
 // get current user's profile
 export const getProfile = (id) => async (dispatch) => {
   try {
+    console.log("id sent in " + id);
     const profile = await axios.get(`${dev}/users/${id}`, {
       headers: { Authorization: localStorage.jwtToken },
     });

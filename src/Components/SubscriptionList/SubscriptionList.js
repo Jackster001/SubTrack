@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import { disableUserProfileLoading } from "../../Action/authAction";
-import {getProfile} from '../../Action/profileAction';
 import { connect } from "react-redux";
 import SubscriptionListItem from "./SubscriptionListItem";
 
 class SubscriptionList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   //include AddSubButton and RemoveSubButton
   displaySubs = (subs) => {
     if (!subs) return [];
