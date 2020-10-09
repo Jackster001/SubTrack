@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import * as routes from '../Routes/routes';
 import { connect } from 'react-redux';
 import { logoutUser } from '../Action/authAction';
+import Spin from 'react-reveal/Spin';
 
 class Navigation extends Component{
     constructor(props){
@@ -40,9 +41,11 @@ class Navigation extends Component{
                 <div className="navULContainer">
                     <ul className="navUL2">
                         <li><Link className="linkColor" to={routes.HOME}>Home</Link></li>
+                        <Spin spy={this.props.loadingProfile}>
                         <li>
                             <Link className="linkAccount" to={routes.ACCOUNT}>Account</Link>
                         </li>
+                        </Spin>
                     </ul>
                 </div>
             </div>
@@ -60,7 +63,8 @@ class Navigation extends Component{
 
 const mapStateToProps =(state) =>({
     isAuthenticated: state.authState.isAuthenticated,
-    profile: state.userState.profile
+    profile: state.userState.profile,
+    loadingProfile:state.userState.loadingProfile,
 })
   
 export default connect(mapStateToProps, {logoutUser})(Navigation);

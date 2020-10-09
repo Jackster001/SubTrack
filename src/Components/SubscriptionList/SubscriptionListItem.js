@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from "react";
 import RemoveSubButton from "./RemoveSubButton";
 import EditModalContainer from "../EditModal/EditModalContainer";
+import Fade from 'react-reveal';
 //this component will also have the addSubscription and editSubscription buttons
 class SubscriptionList extends Component {
   render() {
     if (this.props.sub) {
       return (
+        <Fade top>
           <div className="listContain">
             <div className="subList">
               <img
@@ -20,6 +22,7 @@ class SubscriptionList extends Component {
             <RemoveSubButton index={this.props.index} />
             <EditModalContainer index={this.props.index} />
           </div>
+          </Fade>
       );
     }
     return [];
