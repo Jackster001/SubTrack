@@ -15,12 +15,12 @@ class AddModalContainer extends Component {
   };
   render() {
     return (
-      <Fragment>
+      <div className="addHold">
         <AddSubButton toggleModal={this.toggleModal} />
         {this.state.addOpen && (
             <AddSubModal toggleModal={this.toggleModal} />
         )}
-      </Fragment>
+      </div>
     );
   }
 }
