@@ -8,7 +8,7 @@ class SubscriptionList extends Component {
   displaySubs = (subs) => {
     if (!subs) return [];
     return subs.map((sub, index) => {
-      return <SubscriptionListItem sub={sub} index={index} key={index}/>;
+      return <SubscriptionListItem sub={sub} index={index} key={index} />;
     });
   };
 
@@ -17,11 +17,9 @@ class SubscriptionList extends Component {
       this.props.disableUserProfileLoading();
     }
   }
-  
+
   render() {
-    return (
-      <div className="listHold">{this.displaySubs(this.props.subs)}</div>
-    );
+    return <div className="listHold">{this.displaySubs(this.props.subs)}</div>;
   }
 }
 
