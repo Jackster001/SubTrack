@@ -277,3 +277,11 @@ input {
   margin:5vh;
   margin-right:20vh;
 }
+
+.glanceContain{
+  width:180vh;
+  margin:3vh;
+  padding:3vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+}

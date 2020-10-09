@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { disableUserProfileLoading } from "../Action/authAction";
 import AddModalContainer from "../Components/AddModal/AddModalContainer";
 import SubscriptionList from '../Components/SubscriptionList/SubscriptionList';
+import GlanceHeader from "../Components/GlanceHeader/GlanceHeader";
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>You are logged in!</h1>
+        <GlanceHeader/>
         <SubscriptionList/>
         <AddModalContainer />
       </div>
