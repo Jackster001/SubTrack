@@ -1,57 +1,57 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.navBar{
+.navBar {
   width: 100%;
   height: 100px;
   flex-direction: row;
   display: flex;
 }
-.navUL{
+.navUL {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navUL2{
+.navUL2 {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.navUL2>li{
+.navUL2 > li {
   margin: 5px;
   text-decoration: none;
   float: right;
 }
-.navUL>li{
+.navUL > li {
   margin: 5px;
   text-decoration: none;
 }
-.navLogoContainer{
-  width:32.33%;
+.navLogoContainer {
+  width: 32.33%;
   margin-top: 15px;
 }
-.navLogoContainer>h1{
+.navLogoContainer > h1 {
   font-weight: 500;
   margin-left: 10px;
 }
-.navULContainer{
-  width:66.33%;
+.navULContainer {
+  width: 66.33%;
   float: left;
   margin-top: 30px;
 }
-.signUpContainer{
+.signUpContainer {
   width: 400px;
   max-height: 700px;
   background-color: white;
@@ -63,7 +63,7 @@ code {
   background-color: #dbdbdb;
   padding: 15px 0px;
 }
-.signInContainer{
+.signInContainer {
   width: 400px;
   max-height: 700px;
   background-color: white;
@@ -75,11 +75,11 @@ code {
   background-color: #dbdbdb;
   padding: 15px 0px;
 }
-.signInForm{
+.signInForm {
   width: 80%;
   margin: 0 auto;
 }
-.signInForm>form>input{
+.signInForm > form > input {
   width: 100%;
   padding: 10px 10px;
   margin: 10px 0px;
@@ -88,11 +88,11 @@ code {
   border-radius: 2px;
   box-sizing: border-box;
 }
-.signupForm{
+.signupForm {
   width: 80%;
   margin: 0 auto;
 }
-.signupForm>form>input{
+.signupForm > form > input {
   width: 100%;
   padding: 10px 10px;
   margin: 10px 0px;
@@ -101,40 +101,117 @@ code {
   border-radius: 2px;
   box-sizing: border-box;
 }
-.submitButton{
-  width: 100%;
+.submitButton {
+  width: 40vh;
+  border-radius: 20px;
   padding: 15px 10px;
-  box-sizing: border-box;
   font-weight: 600;
   margin-top: 10px;
-  background-color: #e6c875;
+  background-color: #ef4836;
   border: none;
   color: white;
   font-size: 16px;
-  border-radius: 1px;
 }
-.submitButton:hover{
-  background-color: #f0c859;
+.submitModalButton {
+  width: 25vh;
+  height: 6.7vh;
+  border-radius: 15px;
+  padding: 15px 10px;
+  font-weight: 400;
+  margin-top: 1.3vh;
+  background-color: #ef4836;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 9vh;
+}
+.submitButton:hover {
+  background-color: #ef4836;
   cursor: pointer;
 }
-.ProfileContainer{
+.ProfileContainer {
   background-color: rgba(238, 238, 238, 0.5);
   width: 500px;
   max-height: 500px;
-  padding:20px;
+  padding: 20px;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 5px 10px 10px #888888;
   margin-top: 15px;
 }
-.accountCircle{
-  margin-top: 20px; 
+.accountCircle {
+  margin-top: 20px;
 }
-.accountCircleContainer{
+.accountCircleContainer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
+.subModal {
+  width: 50vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vh;
+}
+
+input {
+  height: 5vh;
+  margin: 2vh;
+  border-radius: 10px;
+  width: 40vh;
+  border: 0;
+  box-shadow: 2px 2px 5px #888888;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.quitButton {
+  border: 0;
+  width: 5vh;
+  height: 5vh;
+  box-shadow: 2px 2px 5px #888888;
+  border-radius: 10px;
+  margin-left: 6vh;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.addToggleButton {
+  height: 8vh;
+  width: 12vh;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 3px 3px 5px #888888;
+  background-color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+.modalAnimate-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modalAnimate-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.modalAnimate-exit {
+  opacity: 1;
+}
+.modalAnimate-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
 .listContain{
   display: flex;
   flex-direction: row;
