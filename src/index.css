@@ -147,7 +147,6 @@ code {
   align-items: center;
   justify-content: flex-end;
 }
-
 .subModal {
   position:absolute;
   width: 50vh;
@@ -163,6 +162,8 @@ code {
   padding: 3vh;
   z-index: 2;
 }
+
+
 
 input {
   height: 5vh;
@@ -197,24 +198,6 @@ input {
   font-size: 3rem;
   text-align: center;
   font-weight: 200;
-}
-
-.modalAnimate-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.modalAnimate-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.modalAnimate-exit {
-  opacity: 1;
-}
-.modalAnimate-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
 }
 
 .listContain{
@@ -315,4 +298,12 @@ input {
   margin:auto;
   justify-content:center;
   margin:3vh;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
 }
