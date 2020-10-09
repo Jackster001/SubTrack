@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { addSubscription } from "../../Action/profileAction";
 import { disableUserProfileLoading } from "../../Action/profileAction";
 import { connect } from "react-redux";
+import Slide from "react-reveal";
 
 //Will return to the date later, maybe implement calendar library?
 class AddSubModal extends Component {
@@ -35,15 +36,7 @@ class AddSubModal extends Component {
       price: "",
       date: "",
     });
-    this.props.toggleModal()
-  }
-
-  componentDidMount() {
-    document.addEventListener("click", this.handleClickOutside, false);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("click", this.handleClickOutside, false);
+    this.props.toggleModal();
   }
 
   componentDidUpdate() {
@@ -52,55 +45,53 @@ class AddSubModal extends Component {
     }
   }
 
-  handleClickOutside = (event) => {
-    if (!this.modalRef.current.contains(event.target)) this.props.toggleModal();
-  };
-
   handleClickClose = () => {
     this.props.toggleModal();
   };
 
   render() {
     return (
-      <div className="subModal" ref={this.modalRef}>
-        <h1>Add a subscription.</h1>
-        <button
-          type="button"
-          className="quitButton"
-          onClick={this.handleClickClose}
-        >
-          X
-        </button>
-        <form onSubmit={(e) => this.onSubmit(e)}>
-          <input
-            type="title"
-            name="title"
-            placeholder="Name"
-            onChange={this.handleInputChange}
-            value={this.state.title}
-            required
-          />
-          <input
-            type="price"
-            name="price"
-            placeholder="Price"
-            onChange={this.handleInputChange}
-            value={this.state.price}
-            required
-          />
-          <input
-            type="date"
-            name="date"
-            placeholder="Date"
-            onChange={this.handleInputChange}
-            value={this.state.date}
-            required
-          />
-          <button type="submit" className="submitModalButton">
-            Submit
+      <Slide bottom ref={this.modalRef}>
+        <div className="addSubModal">
+          <h1>Add a subscription.</h1>
+          <button
+            type="button"
+            className="quitButton"
+            onClick={this.handleClickClose}
+          >
+            X
           </button>
-        </form>
-      </div>
+          <form onSubmit={(e) => this.onSubmit(e)}>
+            <input
+              type="title"
+              name="title"
+              placeholder="Name"
+              onChange={this.handleInputChange}
+              value={this.state.title}
+              required
+            />
+            <input
+              type="price"
+              name="price"
+              placeholder="Price"
+              onChange={this.handleInputChange}
+              value={this.state.price}
+              required
+            />
+            <input
+              type="date"
+              name="date"
+              placeholder="Date"
+              onChange={this.handleInputChange}
+              value={this.state.date}
+              required
+            />
+            <button type="submit" className="submitModalButton">
+              Submit
+            </button>
+          </form>
+        </div>
+      </Slide>
     );
   }
 }
