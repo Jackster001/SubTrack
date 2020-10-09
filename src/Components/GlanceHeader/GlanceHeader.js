@@ -10,8 +10,15 @@ class GlanceHeader extends Component {
     };
   }
   getTotal = (subs) => {
-    if (!subs.length < 2) return 0;
-    let sum = subs.reduce((a, b) => a.price + b.price);
+    if (subs.length < 2) {
+      return 0;
+    }
+    //fastest total for JS - rounds up
+    let sum = 0;
+    for (var i = subs.length; i--; ) {
+      if (subs[i]) sum += Math.ceil(parseFloat(subs[i].price));
+    }
+    console.log("sum " + sum);
     return sum;
   };
   handleClose = () => {
@@ -31,7 +38,7 @@ class GlanceHeader extends Component {
           <CompareChart />
           <button
             type="button"
-            className="removeButton"
+            className="removeChartButton"
             onClick={this.handleClose}
           >
             X
