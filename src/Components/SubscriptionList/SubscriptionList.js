@@ -6,9 +6,6 @@ import SubscriptionListItem from "./SubscriptionListItem";
 class SubscriptionList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      exSubs: [{ title: "Netflix", price: "14.99", date: "12/03/20" }],
-    };
   }
 
   //include AddSubButton and RemoveSubButton
@@ -24,10 +21,10 @@ class SubscriptionList extends Component {
       this.props.disableUserProfileLoading();
     }
   }
-  //this.props.profile.subscriptions
+  //
   render() {
     return (
-      <div className="listHold">{this.displaySubs(this.state.exSubs)}</div>
+      <div className="listHold">{this.displaySubs(this.props.profile.subscriptions)}</div>
     );
   }
 }
