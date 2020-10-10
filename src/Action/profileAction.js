@@ -34,6 +34,7 @@ export const disableUserProfileLoading = () => {
 // add subscription to subscriptions list
 export const addSubscription = (id, subData) => async (dispatch) => {
   try {
+    console.log("id sent " + id);
     const profile = await axios.post(`${dev}/users/add-subscription`, {
       id,
       subData,
@@ -50,7 +51,8 @@ export const addSubscription = (id, subData) => async (dispatch) => {
 // remove subscription from subscriptions applied in the user data
 export const removeSubscription = (id, i) => async (dispatch) => {
   try {
-    const profile = await axios.post(`${dev}/users/delete-subscription/`, {id,i});
+    const profile = await axios.post(`${dev}/users/delete-subscription`, {id,i});
+    console.log("id sent " + id);
     await dispatch({
       type: "REMOVE_SUBSCRIPTION",
       payload: profile.data,

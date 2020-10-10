@@ -55,7 +55,7 @@ class EditSubModal extends Component {
   render() {
     return (
       <Slide right>
-        <div className="subModal" ref={this.modalRef}>
+        <div className="editSubModal" ref={this.modalRef}>
           <div className="editSubModalInner">
             <div className="seperateRow">
                 <button
@@ -87,9 +87,10 @@ class EditSubModal extends Component {
               <input
                 type="date"
                 name="date"
-                placeholder="Date"
+                placeholder="mm/dd/yyyy"
                 onChange={this.handleInputChange}
                 value={this.state.date}
+                pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
                 required
               /><br/><br/>
               <center>

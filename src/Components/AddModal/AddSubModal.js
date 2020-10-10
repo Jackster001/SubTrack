@@ -13,7 +13,6 @@ class AddSubModal extends Component {
       price: "",
       date: "",
     };
-    this.modalRef = React.createRef();
   }
 
   handleInputChange = (event) => {
@@ -29,8 +28,9 @@ class AddSubModal extends Component {
       title: this.state.title,
       price: this.state.price,
       date: this.state.date,
+      remaining:"",
     };
-    this.props.addSubscription(this.props.profile.id, subData);
+    this.props.addSubscription(this.props.profile._id, subData);
     this.setState({
       title: "",
       price: "",
@@ -51,7 +51,7 @@ class AddSubModal extends Component {
 
   render() {
     return (
-      <Slide bottom ref={this.modalRef}>
+      <Slide bottom>
         <div className="addSubModal">
           <div className="addSubModalInner">
             <div className="seperateRow">
@@ -84,9 +84,10 @@ class AddSubModal extends Component {
               <input
                 type="date"
                 name="date"
-                placeholder="Date"
+                placeholder="mm/dd/yyyy"
                 onChange={this.handleInputChange}
                 value={this.state.date}
+                pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
                 required
               /><br/><br/>
               <center>

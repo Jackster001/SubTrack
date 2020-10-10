@@ -35,7 +35,7 @@ class GlanceHeader extends Component {
             <h2 className="total">
               Monthly Total: ${this.getTotal(this.props.subs)}
             </h2>
-            <p>You are paying [AMOUNT] more than last month.</p>
+            <p>Keep it up! Add more subscriptions and see your summary.</p>
           </div>
           <CompareChart />
           <button
