@@ -1,5 +1,5 @@
 import axios from 'axios';
-const server = "https://sub-track-api.herokuapp.com/";
+const server = "https://sub-track-api.herokuapp.com";
 const dev= "http://localhost:3000";
 
 // get current user's profile
