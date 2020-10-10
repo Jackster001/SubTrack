@@ -42,13 +42,14 @@ class Login extends Component {
             <div className="signInForm">
                 <h2>Sign into Account</h2>
                 <form onSubmit={(e)=>this.onSubmit(e)}>
+                    <br/>
                     <input 
                         type="email"
                         name='email'
                         placeholder="Email"
                         onChange={this.handleInputChange}
                         required
-                    />
+                    /><br/><br/>
                     <input 
                         type='password'
                         name='password'
@@ -56,6 +57,7 @@ class Login extends Component {
                         onChange={this.handleInputChange}
                         required
                     />
+                    <br/><br/>
                     {this.props.loginError ? <center><p className="errorTexts">Incorrect Email or Password</p></center>:[]}
                     <center><button className='submitButton'>Login</button></center>
                 </form>

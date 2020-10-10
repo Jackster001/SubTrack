@@ -48,27 +48,28 @@ class SignUp extends Component {
             <div className="signupForm">
               <h2 className="SignUpTitle">Create an Account</h2>
               <form onSubmit={(e) => this.onSubmit(e)}>
+                <br/>
                 <input
                   type="firstName"
                   name="firstName"
                   placeholder="First Name"
                   onChange={this.handleInputChange}
                   required
-                />
+                /><br/><br/>
                 <input
                   type="lastName"
                   name="lastName"
                   placeholder="Last Name"
                   onChange={this.handleInputChange}
                   required
-                />
+                /><br/><br/>
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
                   onChange={this.handleInputChange}
                   required
-                />
+                /><br/><br/>
                 <input
                   type="password"
                   name="password"
@@ -76,6 +77,7 @@ class SignUp extends Component {
                   onChange={this.handleInputChange}
                   required
                 />
+                <br/><br/>
                 <center>
                   <button className="submitButton">Sign Up</button>
                 </center>
