@@ -1,137 +1,417 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.navBar{
+.navBar {
   width: 100%;
+  margin-bottom: 5vh;
   height: 100px;
   flex-direction: row;
   display: flex;
 }
-.navUL{
+.navUL {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navUL2{
+.navUL2 {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.navUL2>li{
+.navUL2 > li {
   margin: 5px;
   text-decoration: none;
   float: right;
 }
-.navUL>li{
+.navUL > li {
   margin: 5px;
   text-decoration: none;
 }
-.navLogoContainer{
-  width:32.33%;
-  margin-top: 15px;
+.navLogoContainer {
+  width: 32.33%;
 }
-.navLogoContainer>h1{
-  font-weight: 500;
-  margin-left: 10px;
+.navLogoContainer h1 {
+  font-weight: 800;
+  margin-left: 10vh;
+  font-size: 4.2rem;
+  margin-top: 4.8vh;
+  color: #ef4836;
 }
-.navULContainer{
-  width:66.33%;
+.navULContainer {
+  width: 66.33%;
   float: left;
   margin-top: 30px;
 }
-.signUpContainer{
+.logoLink {
+  text-decoration: none;
+}
+.signUpContainer {
+  margin: auto;
   width: 400px;
   max-height: 700px;
   background-color: white;
-  position: absolute;
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 15px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
-  background-color: #dbdbdb;
   padding: 15px 0px;
 }
-.signInContainer{
+.signInContainer {
+  margin: auto;
   width: 400px;
   max-height: 700px;
   background-color: white;
-  position: absolute;
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 15px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
-  background-color: #dbdbdb;
   padding: 15px 0px;
 }
-.signInForm{
+.signInForm {
   width: 80%;
   margin: 0 auto;
 }
-.signInForm>form>input{
-  width: 100%;
-  padding: 10px 10px;
-  margin: 10px 0px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
+
+input {
+  height: 5vh;
+  border-radius: 10px;
+  width: 40vh;
+  border: 0;
+  box-shadow: 2px 2px 5px #888888;
+  text-align: center;
+  font-size: 1rem;
 }
-.signupForm{
+
+.signupForm {
   width: 80%;
   margin: 0 auto;
 }
-.signupForm>form>input{
-  width: 100%;
-  padding: 10px 10px;
-  margin: 10px 0px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
+.signInForm > form > input {
+  height: 5vh;
+  margin: 2vh;
+  border-radius: 10px;
+  width: 40vh;
+  border: 0;
+  box-shadow: 2px 2px 5px #888888;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
 }
-.submitButton{
-  width: 100%;
+
+.signupForm > form > input {
+  height: 5vh;
+  border-radius: 10px;
+  width: 40vh;
+  border: 0;
+  box-shadow: 2px 2px 5px #888888;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.submitButton {
+  width: 40vh;
+  border-radius: 20px;
   padding: 15px 10px;
-  box-sizing: border-box;
   font-weight: 600;
   margin-top: 10px;
-  background-color: #e6c875;
+  background-color: #ef4836;
   border: none;
   color: white;
   font-size: 16px;
-  border-radius: 1px;
 }
-.submitButton:hover{
-  background-color: #f0c859;
+.submitButton:active {
+  background-color: #ef4836;
+  opacity: 0.8;
+}
+.submitModalButton {
+  width: 25vh;
+  height: 6.7vh;
+  border-radius: 15px;
+  padding: 15px 10px;
+  font-weight: 400;
+  margin-top: 1.3vh;
+  background-color: #ef4836;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.submitButton:hover {
+  background-color: #ef4836;
   cursor: pointer;
 }
-.ProfileContainer{
-  background-color: rgba(238, 238, 238, 0.5);
+.ProfileContainer {
+  background-color: white;
   width: 500px;
   max-height: 500px;
-  padding:20px;
+  padding: 2vh;
+  padding-bottom: 3vh;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 5px 10px 10px #888888;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #888888;
+  text-align: center;
   margin-top: 15px;
 }
-.accountCircle{
-  margin-top: 20px; 
+.accountCircle {
+  margin-top: 20px;
 }
-.accountCircleContainer{
+.accountCircleContainer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.subModal {
+  position: fixed;
+  width: 50vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  background: white;
+  align-content: center;
+  top: 27%;
+  left: 33%;
+  transform: translate(-27%, -33%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vh;
+  z-index: 1;
+}
+.editSubModal {
+  position: fixed;
+  width: 50vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  background: white;
+  align-content: center;
+  top: -55%;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vh;
+}
+.addSubModal {
+  position: fixed;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  background: white;
+  top: 27%;
+  left: 27%;
+  transform: translate(-27%, -27%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vh;
+  padding-bottom: 50px;
+  z-index: 100;
+}
+.addSubModalInner {
+  width: 85%;
+  margin: 0 auto;
+}
+.editSubModalInner {
+  width: 85%;
+  margin: 0 auto;
+}
+.addSubModalInner > form {
+  width: 100%;
+}
+.addSubModalInner > form > input {
+  width: 100%;
+}
+.editSubModalInner > form {
+  width: 100%;
+}
+.editSubModalInner > form > input {
+  width: 100%;
+}
+.seperateRow {
+  width: 100%;
+  height: 30px;
+  display: block;
+}
+
+.quitButton {
+  border: 0;
+  width: 5vh;
+  height: 5vh;
+  box-shadow: 2px 2px 5px #888888;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1rem;
+  float: right;
+}
+
+.addToggleButton {
+  height: 8vh;
+  width: 12vh;
+  border-radius: 10px;
+  margin-left: auto;
+  border: 0;
+  box-shadow: 3px 3px 5px #888888;
+  background-color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+.listContain {
+  display: flex;
+  flex-direction: row;
+  width:85%;
+  margin:auto;
+  margin-left:25vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.subList {
+  background: white;
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 15px;
+  flex: 1;
+  padding: 3vh;
+}
+
+.listThumb {
+  float: left;
+  height:15vh;
+  width: 15vh;
+  margin-top: 5%;
+}
+
+.textHold {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.namePrice {
+  flex: 1;
+  margin-left: 4vh;
+}
+
+.subListHeader {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.subListPrice {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.subListDate {
+  float: right;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.subListRemain {
+  float: right;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.removeButton {
+  align-self: center;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 15px;
+  border: 0;
+  background-color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px #888888;
+  padding: 3vh;
+  margin: 5vh;
+  margin-right: 20vh;
+}
+
+.glanceContain {
+  width: 140vh;
+  height: 40vh;
+  margin: auto;
+  padding: 5vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+.removeChartButton {
+  align-self: baseline;
+  height: 8vh;
+  width: 8vh;
+  border-radius: 15px;
+  border: 0;
+  background-color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px #888888;
+  padding: 3vh;
+  margin: 5vh;
+}
+
+.addHold {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+}
+
+.botLeft {
+  position: absolute;
+  left: -10vh;
+  z-index: -2;
+  bottom: 0;
+  height: 50vh;
+}
+
+.botLeftFlip {
+  position: absolute;
+  left: -10vh;
+  z-index: -2;
+  bottom: 0;
+  height: 50vh;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+.botRight {
+  position: absolute;
+  z-index: -2;
+  bottom: 0;
+  right: 0;
+  height: 50vh;
+}
+
+.linkColor {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
 }

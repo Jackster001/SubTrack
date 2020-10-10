@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../Action/authAction';
 import * as routes from '../Routes/routes';
+import Fade from "react-reveal";
 
 class Login extends Component {
     constructor(props) {
@@ -35,17 +36,20 @@ class Login extends Component {
 
     render() {
         return (
+          <>
+          <Fade top>
           <div className="signInContainer">
             <div className="signInForm">
                 <h2>Sign into Account</h2>
                 <form onSubmit={(e)=>this.onSubmit(e)}>
+                    <br/>
                     <input 
                         type="email"
                         name='email'
                         placeholder="Email"
                         onChange={this.handleInputChange}
                         required
-                    />
+                    /><br/><br/>
                     <input 
                         type='password'
                         name='password'
@@ -53,6 +57,7 @@ class Login extends Component {
                         onChange={this.handleInputChange}
                         required
                     />
+                    <br/><br/>
                     {this.props.loginError ? <center><p className="errorTexts">Incorrect Email or Password</p></center>:[]}
                     <center><button className='submitButton'>Login</button></center>
                 </form>
@@ -61,6 +66,11 @@ class Login extends Component {
                 <p>Don't have an account? <Link to={routes.SIGNUP}>Sign Up</Link></p></center>
             </div>
           </div>
+          </Fade>
+          <Fade bottom>
+            <img src="/signup.svg" className="botRight"/>
+          </Fade>
+          </>
         );
     }
 }

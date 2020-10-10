@@ -18,63 +18,74 @@ export const getProfile = (id) => async (dispatch)=> {
 
 // Profile loading
 export const setUserProfileLoading = () => {
-    return {
-      type: "USER_PROFILE_LOADING"
-    };
+  return {
+    type: "USER_PROFILE_LOADING",
+  };
 };
 
 // turn off profile loading
 export const disableUserProfileLoading = () => {
-    return {
-      type: "DISABLE_USER_PROFILE_LOADING"
-    };
+  return {
+    type: "DISABLE_USER_PROFILE_LOADING",
+  };
 };
 
 // add subscription to subscriptions list
-export const addSubscription = (id , subData) => async (dispatch)=> {
-    try{
-        const profile= await axios.post(`${server}/users/add-subscription`,{id, subData});
-        await dispatch({
-            type:'ADD_SUBSCRIPTION',
-            payload: profile.data
-        })
-    }catch(err){
-        throw err
-    }
-}
+export const addSubscription = (id, subData) => async (dispatch) => {
+  try {
+    console.log("id sent " + id);
+    const profile = await axios.post(`${dev}/users/add-subscription`, {
+      id,
+      subData,
+    });
+    await dispatch({
+      type: "ADD_SUBSCRIPTION",
+      payload: profile.data,
+    });
+  } catch (err) {
+    throw err;
+  }
+};
 
 // remove subscription from subscriptions applied in the user data
-export const removeSubscription = (id , i) => async (dispatch)=> {
-    try{
-        const profile= await axios.post(`${server}/users/delete-subscription`,{id,i});
-        await dispatch({
-            type:'REMOVE_SUBSCRIPTION',
-            payload: profile.data
-        })
-    }catch(err){
-        throw err
-    }
-}
+export const removeSubscription = (id, i) => async (dispatch) => {
+  try {
+    const profile = await axios.post(`${dev}/users/delete-subscription`, {id,i});
+    console.log("id sent " + id);
+    await dispatch({
+      type: "REMOVE_SUBSCRIPTION",
+      payload: profile.data,
+    });
+  } catch (err) {
+    throw err;
+  }
+};
 
 // update a specific subscription for a user
-export const updateSubscriPTION = (id, jobData, i) => async (dispatch)=> {
-    try{
-        const profile= await axios.post(`${server}/users/update-subscription/`, {id, jobData, i});
-        await dispatch({
-            type:'UPDATE_SUBSCRIPTION',
-            payload: profile.data
-        })
-    }catch(err){
-        throw err
-    }
-}
+export const updateSubscription = (id, subData, i) => async (dispatch) => {
+  try {
+    const profile = await axios.post(`${dev}/users/update-subscription/`, {
+      id,
+      subData,
+      i,
+    });
+    await dispatch({
+      type: "UPDATE_SUBSCRIPTION",
+      payload: profile.data,
+    });
+  } catch (err) {
+    throw err;
+  }
+};
 
 // get all subscriptions
-export const getAllSubscriptions = (id) => async (dispatch)=> {
-    try{
-        const profile= await axios.post(`${server}/users/add-subscription/${id}`, 
-        {headers:{'Authorization':localStorage.jwtToken}});
-    }catch(err){
-        throw err
-    }
-}
+export const getAllSubscriptions = (id) => async (dispatch) => {
+  try {
+    const profile = await axios.get(`${dev}/users/subscriptions/${id}`, {
+      headers: { Authorization: localStorage.jwtToken },
+    });
+  } catch (err) {
+    throw err;
+  }
+};
+

@@ -3,6 +3,7 @@ import setAuthToken from '../Utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 const server = "https://sub-track-api.herokuapp.com";
 const dev= "http://localhost:5000";
+
 export const registerUser=  (userData)=> async dispatch=>{
     try{
         const User = await axios.post(`${server}/users/register`, userData)
