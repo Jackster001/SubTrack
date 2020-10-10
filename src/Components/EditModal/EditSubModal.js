@@ -56,43 +56,49 @@ class EditSubModal extends Component {
     return (
       <Slide right>
         <div className="subModal" ref={this.modalRef}>
-          <h1>Edit a subscription.</h1>
-          <button
-            type="button"
-            className="quitButton"
-            onClick={this.handleClickClose}
-          >
-            X
-          </button>
-          <form onSubmit={(e) => this.onSubmit(e)}>
-            <input
-              type="title"
-              name="title"
-              placeholder="Name"
-              onChange={this.handleInputChange}
-              value={this.state.title}
-              required
-            />
-            <input
-              type="price"
-              name="price"
-              placeholder="Price"
-              onChange={this.handleInputChange}
-              value={this.state.price}
-              required
-            />
-            <input
-              type="date"
-              name="date"
-              placeholder="Date"
-              onChange={this.handleInputChange}
-              value={this.state.date}
-              required
-            />
-            <button type="submit" className="submitModalButton">
-              Change
-            </button>
-          </form>
+          <div className="editSubModalInner">
+            <div className="seperateRow">
+                <button
+                  type="button"
+                  className="quitButton"
+                  onClick={this.handleClickClose}
+                >
+                  X
+                </button>
+            </div>
+            <h1>Edit a subscription.</h1>
+            <form onSubmit={(e) => this.onSubmit(e)}>
+              <input
+                type="title"
+                name="title"
+                placeholder="Name"
+                onChange={this.handleInputChange}
+                value={this.state.title}
+                required
+              /><br/><br/>
+              <input
+                type="price"
+                name="price"
+                placeholder="Price"
+                onChange={this.handleInputChange}
+                value={this.state.price}
+                required
+              /><br/><br/>
+              <input
+                type="date"
+                name="date"
+                placeholder="Date"
+                onChange={this.handleInputChange}
+                value={this.state.date}
+                required
+              /><br/><br/>
+              <center>
+                <button type="submit" className="submitModalButton">
+                  Change
+                </button>
+              </center>
+            </form>
+            </div>
         </div>
       </Slide>
     );
