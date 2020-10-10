@@ -83,7 +83,7 @@ export const updateSubscription = (id, jobData, i) => async (dispatch) => {
 // get all subscriptions
 export const getAllSubscriptions = (id) => async (dispatch) => {
   try {
-    const profile = await axios.post(`${dev}/users/add-subscription/${id}`, {
+    const profile = await axios.get(`${dev}/users/subscriptions/${id}`, {
       headers: { Authorization: localStorage.jwtToken },
     });
   } catch (err) {
