@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { addSubscription } from "../../Action/profileAction";
+import { updateSubscription } from "../../Action/profileAction";
 import { disableUserProfileLoading } from "../../Action/profileAction";
 import { connect } from "react-redux";
 import Slide from "react-reveal";
-
 //Will return to the date later, maybe implement calendar library?
-class AddSubModal extends Component {
+class EditSubModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,7 +29,11 @@ class AddSubModal extends Component {
       price: this.state.price,
       date: this.state.date,
     };
-    this.props.addSubscription(this.props.profile.id, subData);
+    this.props.updateSubscription(
+      this.props.profile.id,
+      subData,
+      this.props.index
+    );
     this.setState({
       title: "",
       price: "",
@@ -51,9 +54,9 @@ class AddSubModal extends Component {
 
   render() {
     return (
-      <Slide bottom ref={this.modalRef}>
-        <div className="addSubModal">
-          <h1>Add a subscription.</h1>
+      <Slide right>
+        <div className="subModal" ref={this.modalRef}>
+          <h1>Edit a subscription.</h1>
           <button
             type="button"
             className="quitButton"
@@ -87,7 +90,7 @@ class AddSubModal extends Component {
               required
             />
             <button type="submit" className="submitModalButton">
-              Submit
+              Change
             </button>
           </form>
         </div>
@@ -102,6 +105,6 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  addSubscription,
+  updateSubscription,
   disableUserProfileLoading,
-})(AddSubModal);
+})(EditSubModal);

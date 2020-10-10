@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../Action/authAction';
 import * as routes from '../Routes/routes';
+import Fade from "react-reveal";
 
 class Login extends Component {
     constructor(props) {
@@ -35,6 +36,8 @@ class Login extends Component {
 
     render() {
         return (
+          <>
+          <Fade top>
           <div className="signInContainer">
             <div className="signInForm">
                 <h2>Sign into Account</h2>
@@ -61,6 +64,11 @@ class Login extends Component {
                 <p>Don't have an account? <Link to={routes.SIGNUP}>Sign Up</Link></p></center>
             </div>
           </div>
+          </Fade>
+          <Fade bottom>
+            <img src="/signup.svg" className="botRight"/>
+          </Fade>
+          </>
         );
     }
 }
