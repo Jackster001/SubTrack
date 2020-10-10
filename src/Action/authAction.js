@@ -3,6 +3,7 @@ import setAuthToken from '../Utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 const server = "";
 const dev= "http://localhost:5000";
+
 export const registerUser=  (userData)=> async dispatch=>{
     try{
         const User = await axios.post(`${dev}/users/register`, userData)
