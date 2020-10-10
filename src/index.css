@@ -88,7 +88,6 @@ code {
 
 input {
   height: 5vh;
-  margin: 2vh;
   border-radius: 10px;
   width: 40vh;
   border: 0;
@@ -115,7 +114,6 @@ input {
 
 .signupForm>form>input {
   height: 5vh;
-  margin: 2vh;
   border-radius: 10px;
   width: 40vh;
   border: 0;
@@ -151,7 +149,6 @@ input {
   border: none;
   color: white;
   font-size: 1.2rem;
-  margin-left: 9vh;
 }
 .submitButton:hover {
   background-color: #ef4836;
@@ -178,34 +175,59 @@ input {
   justify-content: flex-end;
 }
 .subModal {
-  position: absolute;
+  position: fixed;
   width: 50vh;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888888;
   background: white;
   align-content: center;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 27%;
+  left: 33%;
+  transform: translate(-27%, -33%);
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
-  z-index: 100;
+  z-index: 1;
 }
 .addSubModal {
-  position: absolute;
-  width: 50vh;
+  position: fixed;
+  width: 400px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888888;
   background: white;
-  align-content: center;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 27%;
+  left: 27%;
+  transform: translate(-27%, -27%);
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
+  padding-bottom: 50px;
   z-index: 100;
+}
+.addSubModalInner{
+  width:85%;
+  margin:0 auto;
+}
+.editSubModalInner{
+  width:85%;
+  margin:0 auto;
+}
+.addSubModalInner>form{
+  width: 100%;
+}
+.addSubModalInner>form>input{
+  width: 100%;
+}
+.editSubModalInner>form{
+  width: 100%;
+}
+.editSubModalInner>form>input{
+  width: 100%;
+}
+.seperateRow{
+  width: 100%;
+  height: 30px;
+  display: block;
 }
 
 .quitButton {
@@ -214,9 +236,9 @@ input {
   height: 5vh;
   box-shadow: 2px 2px 5px #888888;
   border-radius: 10px;
-  margin-left: 6vh;
   background-color: white;
   font-size: 1rem;
+  float:right
 }
 
 .addToggleButton {
