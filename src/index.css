@@ -187,7 +187,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
-  z-index: 1000000;
+  z-index: 1;
 }
 .addSubModal {
   position: fixed;

@@ -50,10 +50,7 @@ export const addSubscription = (id, subData) => async (dispatch) => {
 // remove subscription from subscriptions applied in the user data
 export const removeSubscription = (id, i) => async (dispatch) => {
   try {
-    const profile = await axios.post(`${dev}/users/delete-subscription`, {
-      id,
-      i,
-    });
+    const profile = await axios.post(`${dev}/users/delete-subscription/`, {id,i});
     await dispatch({
       type: "REMOVE_SUBSCRIPTION",
       payload: profile.data,

@@ -7,6 +7,7 @@ class SubscriptionList extends Component {
   render() {
     if (this.props.sub) {
       return (
+        <div>
         <Fade top>
           <div className="listContain">
             <div className="subList">
@@ -23,6 +24,7 @@ class SubscriptionList extends Component {
             <EditModalContainer index={this.props.index} />
           </div>
           </Fade>
+          </div>
       );
     }
     return [];

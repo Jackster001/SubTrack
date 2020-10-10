@@ -6,7 +6,7 @@ import {
 
 class RemoveSubButton extends Component {
   handleRemove = () => {
-    this.props.removeSubscription(this.props.profile.id, this.props.index);
+    this.props.removeSubscription(this.props.profile._id, this.props.index);
   };
 
   render() {

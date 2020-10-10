@@ -30,7 +30,7 @@ class EditSubModal extends Component {
       date: this.state.date,
     };
     this.props.updateSubscription(
-      this.props.profile.id,
+      this.props.profile._id,
       subData,
       this.props.index
     );
