@@ -30,7 +30,7 @@ class AddSubModal extends Component {
       date: this.state.date,
       remaining:"",
     };
-    this.props.addSubscription(this.props.profile._id, subData);
+    this.props.addSubscription(this.props.profile.id, subData);
     this.setState({
       title: "",
       price: "",

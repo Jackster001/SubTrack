@@ -278,9 +278,10 @@ input {
 }
 .subList {
   background: white;
+  flex: 1 0 auto;
+  margin-left:-10vh;
   box-shadow: 5px 5px 10px #888888;
   border-radius: 15px;
-  flex: 1;
   padding: 3vh;
 }
 
@@ -337,7 +338,7 @@ input {
   box-shadow: 5px 5px 10px #888888;
   padding: 3vh;
   margin: 5vh;
-  margin-right: 20vh;
+  margin-right: 10vh;
 }
 
 .glanceContain {
