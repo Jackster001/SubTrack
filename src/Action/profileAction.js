@@ -1,6 +1,6 @@
 import axios from 'axios';
 const server = "https://sub-track-api.herokuapp.com";
-const dev= "http://localhost:3000";
+const dev= "http://localhost:5000";
 
 // get current user's profile
 export const getProfile = (id) => async (dispatch)=> {
