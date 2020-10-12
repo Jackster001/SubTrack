@@ -13,10 +13,12 @@ class SignUp extends Component {
       lastName: "",
       email: "",
       password: "",
+      loading: false
     };
   }
   componentDidMount() {
     if (this.props.isAuthenticated) {
+      this.setState({loading:false})
       this.props.history.push("/home");
     }
   }
@@ -38,11 +40,14 @@ class SignUp extends Component {
     event.preventDefault();
     const { firstName, lastName, email, password } = this.state;
     const userData = { firstName, lastName, email, password };
+    this.setState({loading:true});
     this.props.registerUser(userData);
+    this.setState({loading:false});
   };
   render() {
     return (
       <>
+        {this.state.loading && (<div className="loaderContainer"><div className="loader"></div></div>)}
         <Fade top>
           <div className="signUpContainer">
             <div className="signupForm">
