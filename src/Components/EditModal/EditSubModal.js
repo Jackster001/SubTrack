@@ -100,8 +100,8 @@ class EditSubModal extends Component {
               </center>
             </form>
             </div>
-        </div>
-      </Slide>
+         </div>
+        </Slide>
     );
   }
 }
