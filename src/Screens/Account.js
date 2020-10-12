@@ -12,7 +12,7 @@ class Account extends Component {
           </center>
           <div className="ProfileContainer">
             <h3>Name:</h3>
-            {this.props.profile.firstName}
+            {this.props.profile.firstName} <br/>
             {this.props.profile.lastName}
             <h3>Email: </h3>
             {this.props.profile.email}

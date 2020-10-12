@@ -68,6 +68,7 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px 0px;
+  text-align:center;  
 }
 .signInContainer {
   margin: auto;
@@ -80,6 +81,7 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px 0px;
+  text-align:center;  
 }
 .signInForm {
   width: 80%;
@@ -163,6 +165,7 @@ input {
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 5px 5px 10px #888888;
+  font-size:1.2rem;
   text-align: center;
   margin-top: 15px;
 }
