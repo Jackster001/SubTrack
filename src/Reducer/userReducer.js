@@ -38,6 +38,12 @@ export default function(state= initialState, action){
                 loadingProfile: true
             }
         }
+        case "UPDATE_EMAIL":
+            return{
+                ...state,
+                profile: action.payload,
+                loadingProfile: true,
+            }
         case "DISABLE_USER_PROFILE_LOADING":
             return{
                 ...state,

@@ -65,6 +65,7 @@ export const removeSubscription = (id, i) => async (dispatch) => {
 // update a specific subscription for a user
 export const updateSubscription = (id, subData, i) => async (dispatch) => {
   try {
+    console.log("id sent " + id);
     const profile = await axios.post(`${dev}/users/update-subscription/`, {
       id,
       subData,
@@ -90,3 +91,19 @@ export const getAllSubscriptions = (id) => async (dispatch) => {
   }
 };
 
+export const toggleEmail = (id, index) => async (dispatch) =>{
+  try{
+    console.log("id sent " + id + "index sent " + index);
+    const profile = await axios.post(`${dev}/users/toggle-email`, {
+      id,
+      index
+    });
+    await dispatch({
+      type: "UPDATE_SUBSCRIPTION",
+      payload: profile.data,
+    });
+  }
+  catch(err){
+    throw err;
+  }
+};

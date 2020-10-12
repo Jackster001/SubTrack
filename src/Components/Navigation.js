@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import * as routes from "../Routes/routes";
 import { connect } from "react-redux";
 import { logoutUser } from "../Action/authAction";
-import Spin from "react-reveal/Spin";
 
 class Navigation extends Component {
   constructor(props) {
@@ -57,13 +56,11 @@ class Navigation extends Component {
                 <img src="profileIcon.svg"/>
               </Link>
             </li>
-            <Spin spy={this.props.loadingProfile}>
               <li>
                 <Link className="linkAccount" to={routes.HOME}>
                   <img src="dashIcon.svg" />
                 </Link>
               </li>
-            </Spin>
           </ul>
         </div>
       </div>
