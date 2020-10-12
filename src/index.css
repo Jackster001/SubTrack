@@ -196,8 +196,9 @@ input {
   box-shadow: 5px 5px 10px #888888;
   background: white;
   align-content: center;
-  top: -55%;
-  left: 50%;
+  top: 10%;
+  left: 60%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
