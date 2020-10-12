@@ -15,11 +15,25 @@ class Landing extends Component {
   }
   render() {
     return (
-      <Slide left>
-        <div>
-          <h1>Landing Page</h1>
-        </div>
-      </Slide>
+      <div style={{ marginLeft: `10vh`, marginTop: `10vh` }}>
+        <Fade left>
+          <h1 style={{ fontSize: `3rem` }}>
+            We keep track, so you don't have to.
+          </h1>
+          <p style={{ fontSize: `1.5rem` }}>
+            {" "}
+            Subscription services amass everyday for the average user. Now, you
+            can stay updated from one email inbox.
+            <br />
+          </p>
+          <p style={{ fontSize: `1.5rem`, marginTop: `40vh`, bottom: `0` }}>
+            <br /> Don't miss recurring payments: stay on track, with SubTrack.
+          </p>
+        </Fade>
+        <Fade bottom>
+          <img src="/homefiles.svg" className="botRight" />
+        </Fade>
+      </div>
     );
   }
 }
