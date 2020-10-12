@@ -10,20 +10,25 @@ class Home extends Component {
     super(props);
     this.state = {
       profile: {},
+      loading:false
     };
   }
   componentDidUpdate() {
     if (this.props.loadingProfile) {
       this.props.disableUserProfileLoading();
-      this.setState({ ...this.state, profile: this.props.profile });
+      this.setState({ ...this.state, profile: this.props.profile, loading:false });
     }
+  }
+  turnOnLoading(){
+    this.setState({loading:true})
   }
   render() {
     return (
       <div>
+        {this.state.loading && (<div className="loaderContainer"><div className="loader"></div></div>)}
         <GlanceHeader/>
         <SubscriptionList/>
-        <AddModalContainer />
+        <AddModalContainer onClick={()=>this.turnOnLoading()}/>
         <br/>
       </div>
     );

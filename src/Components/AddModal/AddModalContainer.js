@@ -18,7 +18,7 @@ class AddModalContainer extends Component {
       <div className="addHold">
         <AddSubButton toggleModal={this.toggleModal} />
         {this.state.addOpen && (
-            <AddSubModal toggleModal={this.toggleModal} />
+            <AddSubModal toggleModal={this.toggleModal} onClick={()=>this.props.onClick}/>
         )}
       </div>
     );
