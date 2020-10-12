@@ -199,9 +199,8 @@ input {
   box-shadow: 5px 5px 10px #888888;
   background: white;
   align-content: center;
-  top: 10%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  top: -30%;
+  left:60%;
   display: flex;
   flex-wrap: wrap;
   padding: 3vh;
@@ -262,6 +261,7 @@ input {
   height: 8vh;
   width: 12vh;
   border-radius: 10px;
+  margin-top:3vh;
   margin-left: auto;
   border: 0;
   box-shadow: 3px 3px 5px #888888;
@@ -431,11 +431,11 @@ input {
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #ef4836;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
   position: fixed;
   top:40%;
   left:45%;
