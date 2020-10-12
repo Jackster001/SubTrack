@@ -11,7 +11,7 @@ class GlanceHeader extends Component {
     };
   }
   getTotal = (subs) => {
-    if (subs.length < 2) {
+    if (subs.length < 1) {
       return 0;
     }
     //fastest total for JS - rounds up
