@@ -40,8 +40,9 @@ class SignUp extends Component {
     event.preventDefault();
     const { firstName, lastName, email, password } = this.state;
     const userData = { firstName, lastName, email, password };
-    this.setState({loading:true})
+    this.setState({loading:true});
     this.props.registerUser(userData);
+    this.setState({loading:false});
   };
   render() {
     return (
