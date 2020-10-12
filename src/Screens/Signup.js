@@ -19,7 +19,6 @@ class SignUp extends Component {
   componentDidMount() {
     if (this.props.isAuthenticated) {
       this.setState({loading:false})
-      this.props.disableUserProfileLoading();
       this.props.history.push("/home");
     }
   }
