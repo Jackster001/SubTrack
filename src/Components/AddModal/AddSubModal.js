@@ -91,7 +91,7 @@ class AddSubModal extends Component {
                 required
               /><br/><br/>
               <center>
-                <button type="submit" className="submitModalButton">
+                <button type="submit" className="submitModalButton" onClick={this.props.onClick()}>
                   Submit
                 </button>
               </center>
