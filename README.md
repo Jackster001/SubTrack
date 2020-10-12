@@ -11,6 +11,8 @@ There are 3 main features and locales of our application:
 2. **Email notifications**, where we periodically check for any soon to expire subscriptions, and notify you. This can be toggled in subscription management
 3. **Subscription management**, where you can add, modify, remove, and see general data about your spending habits
 
+![subpage](https://i.imgur.com/CYNpdAV.png)
+
 ## What's next for SubTrack
 - API integrations to manage subscriptions and payments from third party logins on SubTrack
 - Changes to account management so you can correct names and emails
